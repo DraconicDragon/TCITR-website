@@ -27,6 +27,10 @@ jobs:
     - name: Publish .NET Core Project
       run: dotnet publish TCITR-website/TCITR-website.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
       
+    # changes the base-tag in index.html from '/' to 'TCITR-website' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to TCITR-website
+      run: sed -i 's/<base href="\/" \/>/<base href="\/TCITR-website\/" \/>/g' release/wwwroot/index.html
+      
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
