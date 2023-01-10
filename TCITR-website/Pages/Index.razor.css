@@ -8,11 +8,18 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 4px solid #e8ac74; /* Border color is optional */  
+  border: 4px solid #e8ac74;  
   background: #f4c48c;
 }
 
 .column {
   flex: 50%;
   padding: 5px;
+}
+
+/* Responsiveness - perfectionism kickin' */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
 }
