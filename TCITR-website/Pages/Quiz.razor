@@ -5,13 +5,48 @@
 
 <h1>Test your knowledge!</h1>
 
-<p role="status">Current count: @currentCount</p>
 
-<label class="GroupTitle">Filters:</label><br/>
-<input type="radio" name="number" id="all" checked="@checkedRadio("all")" @oninput="@(() => UpdateFilter("all"))" /> 
+
+<label>1) At the beginning of the novel, </label><br/>
+<input type="radio" name="q1" checked="@checkedRadio("all")"/><span>hi</span><br/>
+<input type="radio" name="q1" checked="@checkedRadio("all")"/><span>hi1</span><br/>
+<input type="radio" name="q1" checked="@checkedRadio("all")"/><span>hi2</span><br/>
+
+<label>Question1</label><br/>
+<input type="radio" name="q2" checked="@checkedRadio("all")"/><span>hi</span><br/>
+<input type="radio" name="q2" checked="@checkedRadio("all")"/><span>hi1</span><br/>
+<input type="radio" name="q2" checked="@checkedRadio("all")"/><span>hi2</span><br/>
+
+<label>Question1</label><br/>
+<input type="radio" name="q3" checked="@checkedRadio("all")"/><span>hi</span><br/>
+<input type="radio" name="q3" checked="@checkedRadio("all")"/><span>hi1</span><br/>
+<input type="radio" name="q3" checked="@checkedRadio("all")"/><span>hi2</span><br/>
+
+<label>Question1</label><br/>
+<input type="radio" name="q4" checked="@checkedRadio("all")"/><span>hi</span><br/>
+<input type="radio" name="q4" checked="@checkedRadio("all")"/><span>hi1</span><br/>
+<input type="radio" name="q4" checked="@checkedRadio("all")"/><span>hi2</span><br/>
+
+<label>Question1</label><br/>
+<input type="radio" name="q5" checked="@checkedRadio("all")"/><span>hi</span><br/>
+<input type="radio" name="q5" checked="@checkedRadio("all")"/><span>hi1</span><br/>
+<input type="radio" name="q5" checked="@checkedRadio("all")"/><span>hi2</span><br/>
+
+<label>Question1</label><br/>
+<input type="radio" name="q6" checked="@checkedRadio("all")"/><span>hi</span><br/>
+<input type="radio" name="q6" checked="@checkedRadio("all")"/><span>hi1</span><br/>
+<input type="radio" name="q6" checked="@checkedRadio("all")"/><span>hi2</span><br/>
+
+<label>Question1</label><br/>
+<input type="radio" name="q7" checked="@checkedRadio("all")"/><span>hi</span><br/>
+<input type="radio" name="q7" checked="@checkedRadio("all")"/><span>hi1</span><br/>
+<input type="radio" name="q7" checked="@checkedRadio("all")"/><span>hi2</span><br/>
 
 
 <button class="btn btn-primary" @onclick="EnterQuizAnswers">Enter Answers</button>
+
+<!--percentRight, correctPercent-->
+<p role="status">Current count: @currentCount</p>
 
 
 
@@ -31,13 +66,6 @@
             return false;
         }
     }
-
-
-    private void UpdateFilter(string option)
-    {
-        
-    }
-
 
 
     private void EnterQuizAnswers()
