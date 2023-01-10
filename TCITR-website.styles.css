@@ -4,7 +4,17 @@ img[b-juix6hdveq] {
     max-height: 100%;
 }
 
-.background[b-juix6hdveq] {
+.row[b-juix6hdveq]::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column[b-juix6hdveq] {
+  float: left;
+  width: 50%;
+  padding: 5px;
+  
   height: 500px;
   display: flex;
   align-items: center;
