@@ -17,6 +17,29 @@
 @code {
     private int currentCount = 0;
 
+
+    private bool checkedRadio(string state, FileFilter Filter)
+    {
+        if(state == Filter.Filter)
+        {
+            return true;
+
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
+    private void UpdateFilter(string option)
+    {
+        filter = option;
+        FileFilter.Filter = option;
+    }
+
+
+
     private void EnterQuizAnswers()
     {
         currentCount++;
