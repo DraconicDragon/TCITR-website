@@ -3,7 +3,17 @@ img {
     max-height: 100%;
 }
 
-.background {
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+  
   height: 500px;
   display: flex;
   align-items: center;
