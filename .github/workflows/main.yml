@@ -13,8 +13,8 @@ jobs:
     # uses GitHub's checkout action to checkout code form the main branch
     - uses: actions/checkout@v2
     
-    # sets up .NET Core SDK 6.0.x
-    - name: Setup .NET Core SDK
+    # sets up .NET SDK 7.x
+    - name: Setup .NET SDK
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 7.x
@@ -24,12 +24,20 @@ jobs:
       run: dotnet workload install wasm-tools
       
     # Publishes Blazor project to the release-folder
-    - name: Publish .NET Core Project
-      run: dotnet publish TCITR-website/TCITR-website.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
+    - name: Publish .NET Project
+      run: dotnet publish TCITR-website/TCITR-website.csproj -c Release -o release --nologo
       
-    - name: Commit wwwroot to GitHub Pages
+    # changes the base-tag in index.html from '/' to 'TCITR-website' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to TCITR-website
+      run: sed -i 's/<base href="\/" \/>/<base href="\/TCITR-website\/" \/>/g' release/wwwroot/index.html
+      
+    # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
+    - name: Add .nojekyll file
+      run: touch release/wwwroot/.nojekyll
+      
+    - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: dist/Web/wwwroot
+        FOLDER: release/wwwroot
