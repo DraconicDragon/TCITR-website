@@ -1,7 +1,7 @@
 /* /Pages/Index.razor.rz.scp.css */
 img[b-juix6hdveq] {
-   display: flex; 
-   justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .background[b-juix6hdveq] {
@@ -9,7 +9,7 @@ img[b-juix6hdveq] {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid #dbe4ed; /* Border color is optional */  
+  border: 4px solid #e8ac74; /* Border color is optional */  
   background: rgb(0,0,0,0.2);
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
