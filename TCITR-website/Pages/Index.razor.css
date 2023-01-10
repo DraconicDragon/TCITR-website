@@ -4,7 +4,7 @@ img {
 }
 
 .row {
-  height: 500px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,8 +20,8 @@ img {
   justify-content: center;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 500px) {
+/* Responsive layout */
+@media screen and (max-width: 400px) {
   .column {
     width: 100%;
   }
