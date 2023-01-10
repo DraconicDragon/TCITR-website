@@ -6,7 +6,13 @@
 
 <p role="status">Current count: @currentCount</p>
 
+<label class="GroupTitle">Filters:</label><br/>
+<input type="radio" name="number" id="all" checked="@checkedRadio("all", FileFilter)" @oninput="@(() => UpdateFilter("all"))" /> 
+
+
 <button class="btn btn-primary" @onclick="EnterQuizAnswers">Enter Answers</button>
+
+
 
 @code {
     private int currentCount = 0;
