@@ -20,6 +20,13 @@ img[b-juix6hdveq] {
   align-items: center;
   justify-content: center;
 }
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column[b-juix6hdveq] {
+    width: 100%;
+  }
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-0r8ta3taem] {
     position: relative;
