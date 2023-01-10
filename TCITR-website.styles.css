@@ -4,15 +4,12 @@ img[b-juix6hdveq] {
     max-height: 100%;
 }
 
-.row[b-juix6hdveq]::after {
-  content: "";
-  clear: both;
-  display: table;
+.row[b-juix6hdveq] {
+  display: flex;
 }
 
 .column[b-juix6hdveq] {
-  float: left;
-  width: 50%;
+  flex: 50%;
   padding: 5px;
   
   height: 500px;
