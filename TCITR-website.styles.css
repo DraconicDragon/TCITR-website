@@ -16,13 +16,9 @@ img[b-juix6hdveq] {
 .column[b-juix6hdveq] {
   flex: 50%;
   padding: 5px;
-}
-
-/* Responsiveness - perfectionism kickin' */
-@media screen and (max-width: 500px) {
-  .column[b-juix6hdveq] {
-    width: 100%;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-0r8ta3taem] {
