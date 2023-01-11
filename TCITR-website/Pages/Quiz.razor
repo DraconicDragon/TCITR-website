@@ -1,4 +1,5 @@
 ﻿@page "/quiz"
+@using System.Reflection
 
 <PageTitle>Quiz</PageTitle>
 
@@ -9,44 +10,43 @@
 </style>
 
 <h1>Test your knowledge!</h1>
+<p>This is a small quiz to test what you know about "The Catcher in the Rye".</p>
+<form>
+    <label>1) At the beginning of the novel, from where did Holden tell his story?</label><br/>
+    <input type="radio" name="1" @onchange="() => updateAnswers(true, 1)"/><span> Mental Hospital</span><br/>
+    <input type="radio" name="1" @onchange="() => updateAnswers(false, 1)"/><span> A hill</span><br/>
+    <input type="radio" name="1" @onchange="() => updateAnswers(false, 1)"/><span> Manhattan</span><br/><br/>
 
+    <label>2) How old is Holden when narrating his story?</label><br/>
+    <input type="radio" name="2" @onchange="() => updateAnswers(false, 2)"/><span> 16</span><br/>
+    <input type="radio" name="2" @onchange="() => updateAnswers(true, 2)"/><span> 17</span><br/>
+    <input type="radio" name="2" @onchange="() => updateAnswers(false, 2)"/><span> 18</span><br/><br/>
 
+    <label>3) What did Holden buy for a dollar in New York?</label><br/>
+    <input type="radio" name="3" @onchange="() => updateAnswers(false, 3)"/><span> Blue Hunting Cap</span><br/>
+    <input type="radio" name="3" @onchange="() => updateAnswers(false, 3)"/><span> Red Baseball Cap</span><br/>
+    <input type="radio" name="3" @onchange="() => updateAnswers(true, 3)"/><span> Red Hunting Cap</span><br/><br/>
 
-<label>1) At the beginning of the novel, </label><br/>
-<input type="radio" name="1" checked="@checkedRadio("all")"/><span>hi</span><br/>
-<input type="radio" name="1" checked="@checkedRadio("all")"/><span>hi1</span><br/>
-<input type="radio" name="1" checked="@checkedRadio("all")"/><span>hi2</span><br/>
+    <label>4) Who is Stradlater's Saturday night date?</label><br/>
+    <input type="radio" name="4" @onchange="() => updateAnswers(false, 4)"/><span> Jane Galaga</span><br/>
+    <input type="radio" name="4" @onchange="() => updateAnswers(true, 4)"/><span> Jane Gallagher</span><br/>
+    <input type="radio" name="4" @onchange="() => updateAnswers(false, 4)"/><span> Janice Gallagher</span><br/><br/>
 
-<label>Question1</label><br/>
-<input type="radio" name="2" checked="@checkedRadio("all")"/><span>hi</span><br/>
-<input type="radio" name="2" checked="@checkedRadio("all")"/><span>hi1</span><br/>
-<input type="radio" name="2" checked="@checkedRadio("all")"/><span>hi2</span><br/>
+    <label>5) What's Stradlater's first name?</label><br/>
+    <input type="radio" name="5" @onchange="() => updateAnswers(true, 5)"/><span> Ward</span><br/>
+    <input type="radio" name="5" @onchange="() => updateAnswers(false, 5)"/><span> Dan</span><br/>
+    <input type="radio" name="5" @onchange="() => updateAnswers(false, 5)"/><span> Vlad</span><br/><br/>
 
-<label>Question1</label><br/>
-<input type="radio" name="3" checked="@checkedRadio("all")"/><span>hi</span><br/>
-<input type="radio" name="3" checked="@checkedRadio("all")"/><span>hi1</span><br/>
-<input type="radio" name="3" checked="@checkedRadio("all")"/><span>hi2</span><br/>
+    <label>6) Which disease did Holden use to fake his reason </label><br/>
+    <input type="radio" name="6" @onchange="() => updateAnswers(false, 6)"/><span> Breast Tumor</span><br/>
+    <input type="radio" name="6" @onchange="() => updateAnswers(true, 6)"/><span> Brain Tumor</span><br/>
+    <input type="radio" name="6" @onchange="() => updateAnswers(false, 6)"/><span> Leukemia</span><br/><br/>
 
-<label>Question1</label><br/>
-<input type="radio" name="4" checked="@checkedRadio("all")"/><span>hi</span><br/>
-<input type="radio" name="4" checked="@checkedRadio("all")"/><span>hi1</span><br/>
-<input type="radio" name="4" checked="@checkedRadio("all")"/><span>hi2</span><br/>
-
-<label>Question1</label><br/>
-<input type="radio" name="5" checked="@checkedRadio("all")"/><span>hi</span><br/>
-<input type="radio" name="5" checked="@checkedRadio("all")"/><span>hi1</span><br/>
-<input type="radio" name="5" checked="@checkedRadio("all")"/><span>hi2</span><br/>
-
-<label>Question1</label><br/>
-<input type="radio" name="6" checked="@checkedRadio("all")"/><span>hi</span><br/>
-<input type="radio" name="6" checked="@checkedRadio("all")"/><span>hi1</span><br/>
-<input type="radio" name="6" checked="@checkedRadio("all")"/><span>hi2</span><br/>
-
-<label>Question1</label><br/>
-<input type="radio" name="7" checked="@checkedRadio("all")"/><span>hi</span><br/>
-<input type="radio" name="7" checked="@checkedRadio("all")"/><span>hi1</span><br/>
-<input type="radio" name="7" checked="@checkedRadio("all")"/><span>hi2</span><br/>
-
+    <label>Question1</label><br/>
+    <input type="radio" name="7" @onchange="() => updateAnswers(false, 7)"/><span> hi</span><br/>
+    <input type="radio" name="7" @onchange="() => updateAnswers(false, 7)"/><span> hi1</span><br/>
+    <input type="radio" name="7" @onchange="() => updateAnswers(true, 7)"/><span> hi2</span><br/><br/>
+</form>
 
 <button class="btn btn-primary" @onclick="EnterQuizAnswers">Enter Answers</button>
 
@@ -56,25 +56,34 @@
 
 
 @code {
-    private int correctPercentage = 0;
+    private string correctPercentage = "";
+    private Dictionary<string,bool> answers = new Dictionary<string,bool>{
+        { "1", false },
+        { "2", false },
+        { "3", false },
+        { "4", false },
+        { "5", false },
+        { "6", false },
+        { "7", false }
+    };
 
-
-    private bool checkedRadio(string state)
+    private void updateAnswers(bool check, int num)
     {
-        if(state == "all")
-        {
-            return true;
-
-        }
-        else
-        {
-            return false;
-        }
+        answers[num.ToString()] = check;
     }
 
 
     private void EnterQuizAnswers()
     {
-        correctPercentage++;
+        foreach (var answer in answers)
+        {
+            correctPercentage += answer.Value + " ";
+        }
     }
+
+    private void update(bool check)
+    {
+        throw new NotImplementedException();
+    }
+
 }
