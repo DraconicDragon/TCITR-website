@@ -41,10 +41,25 @@
     <input type="radio" name="6" @onchange="() => updateAnswers(true, 6)"/><span> Brain Tumor</span><br/>
     <input type="radio" name="6" @onchange="() => updateAnswers(false, 6)"/><span> Leukemia</span><br/><br/>
 
-    <label>Question1</label><br/>
-    <input type="radio" name="7" @onchange="() => updateAnswers(false, 7)"/><span> hi</span><br/>
-    <input type="radio" name="7" @onchange="() => updateAnswers(false, 7)"/><span> hi1</span><br/>
-    <input type="radio" name="7" @onchange="() => updateAnswers(true, 7)"/><span> hi2</span><br/><br/>
+    <label>7) What hair color does Phoebe have?</label><br/>
+    <input type="radio" name="7" @onchange="() => updateAnswers(true, 7)"/><span> Red</span><br/>
+    <input type="radio" name="7" @onchange="() => updateAnswers(false, 7)"/><span> Orage</span><br/>
+    <input type="radio" name="7" @onchange="() => updateAnswers(false, 7)" /><span> Blonde</span><br /><br />
+
+    <label>8) Where is Ernie's Nightclub located at?</label><br />
+    <input type="radio" name="7" @onchange="() => updateAnswers(false, 8)" /><span> Greenwich Village</span><br />
+    <input type="radio" name="7" @onchange="() => updateAnswers(false, 8)" /><span> Greenwich Valley</span><br />
+    <input type="radio" name="7" @onchange="() => updateAnswers(true, 8)" /><span> Manhattan</span><br /><br />
+
+    <label>9) How is the elevator man called?</label><br/>
+    <input type="radio" name="7" @onchange="() => updateAnswers(false, 9)" /><span> Morris</span><br />
+    <input type="radio" name="7" @onchange="() => updateAnswers(false, 9)" /><span> Mauricio</span><br />
+    <input type="radio" name="7" @onchange="() => updateAnswers(true, 9)" /><span> Maurice</span><br /><br />
+
+    <label>10) What does Holden buy for Phoebe?</label><br />
+    <input type="radio" name="7" @onchange="() => updateAnswers(true, 10)" /><span> A recording</span><br />
+    <input type="radio" name="7" @onchange="() => updateAnswers(false, 10)" /><span> A CD</span><br />
+    <input type="radio" name="7" @onchange="() => updateAnswers(false, 10)" /><span> A VHS tape</span><br /><br />
 </form>
 
 <button class="btn btn-primary" @onclick="EnterQuizAnswers">Enter Answers</button>
@@ -64,7 +79,10 @@
         { "4", false },
         { "5", false },
         { "6", false },
-        { "7", false }
+        { "7", false },
+        { "8", false },
+        { "9", false },
+        { "10", false },
     };
 
     private void updateAnswers(bool check, int num)
