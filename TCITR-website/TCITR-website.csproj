@@ -7,12 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Pages\AboutHolden.razor.css" />
     <None Remove="Pages\AboutPhoebe.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Pages\AboutHolden.razor.css" />
     <Content Include="Pages\AboutPhoebe.razor.css" />
   </ItemGroup>
 
