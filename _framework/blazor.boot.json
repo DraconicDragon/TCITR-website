@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "Microsoft.AspNetCore.Components.dll": "sha256-dgLaZXSmogD3s0vxNhOpvVQn6zx4+yMM+Fr+JCvoIEA=",
+      "Microsoft.AspNetCore.Components.dll": "sha256-2vb5Tk4eU1I6bZOwtWRkXMlZMeCS\/8ZZdeb6N3Gr494=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-ZvB65TF6Tix6kJ7DpZLqlclEGauA8yT7fm7zhj+YQNM=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-VfuhQtMrvCmEflZYOOSPlstWKSnWBKH\/9leuaVp3ChE=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-X\/f4fDl2cuIRXeWHhK\/f2UqQbFioD+RU4a4CEh0zrrQ=",
@@ -22,7 +22,7 @@
       "Microsoft.JSInterop.dll": "sha256-KnwOZIbbEsohnvCGve4h1hg6Bbb0NBb93p6MFMDURXE=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-gAM0U1w98ffRNyjMybCtgJeQFGgmxqc7CH1\/UxP2p2o=",
       "System.Collections.Concurrent.dll": "sha256-JzzEy0kwTr5TE3x\/sapHh4jtjpDvfmuc\/ch1FMtjILM=",
-      "System.Collections.dll": "sha256-Pv4pD3rxq7qmwFCSWQlmAYc7rIICjNMI7gSsyPVsNuk=",
+      "System.Collections.dll": "sha256-AMDEDaI6EjGbAclLe2BODjyTuo6OAGEe0Tpd529+QFs=",
       "System.ComponentModel.dll": "sha256-Ai6Dlg1M21zcB936W5gTAjo76y3+XiR4JS1iNPR0ENA=",
       "System.Linq.dll": "sha256-XBENZ0dzjDMae+Z\/IDcxs1C7oXzeisfr3tkqhPJmb2I=",
       "System.Memory.dll": "sha256-24TCdrD9zDZ0D9STpXgm4VXQdyLeSaA1zOSWlH8t+j4=",
@@ -30,11 +30,11 @@
       "System.Net.Primitives.dll": "sha256-bT+dyseZ9JgmLHKj1pvxwiF1w4dreJuEvc0W9p9nQKk=",
       "System.Private.CoreLib.dll": "sha256-3gsjYCc2ybhoL4fVnxxbAugC2MS86hIFoTpSb8WJyOo=",
       "System.Private.Uri.dll": "sha256-HqLakGc1oQBvEpetKobVaYziZrdgpOE3C4uQyUxdJYU=",
-      "System.Runtime.dll": "sha256-u\/0JIS67THg0EtL1K5Jmmf6wiL9u2sXnn7oqTXq3\/iQ=",
+      "System.Runtime.dll": "sha256-K\/b\/bzG25m4ZQrHXf0e1dg8UOkj7YbHE0pvD4ClXN5Y=",
       "System.Runtime.InteropServices.JavaScript.dll": "sha256-zVlppHE2bX\/Js1XI+rya3FNrenVDe\/gmXwFYGbGcvrM=",
       "System.Text.Encodings.Web.dll": "sha256-HJTrpZzZwWWrhb9fBDZ8PoVDylCQLkc+zVtMtihZO8M=",
       "System.Text.Json.dll": "sha256-Ket+l2QF2ImvvPOgRfj3zyuhnHuPPJ2gEnzgHLKr030=",
-      "TCITR-website.dll": "sha256-Cha2r6bJNYhLcvl8M1EwUnFz+oBjRC7vYOY\/\/3sZLdo="
+      "TCITR-website.dll": "sha256-eqT6lsSCBrssuFISxg19FEgp0cSX2wPdissMustCvsk="
     },
     "extensions": null,
     "lazyAssembly": null,
