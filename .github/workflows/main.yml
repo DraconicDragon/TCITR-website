@@ -23,10 +23,6 @@ jobs:
     - name: Install .NET WASM Build Tools
       run: dotnet workload install wasm-tools
       
-    # Install MudBlazor
-    - name: Install .NET WASM Build Tools
-      run: dotnet add package MudBlazor
-      
     # Publishes Blazor project to the release-folder
     - name: Publish .NET Project
       run: dotnet publish TCITR-website/TCITR-website.csproj -c Release -o release --nologo
