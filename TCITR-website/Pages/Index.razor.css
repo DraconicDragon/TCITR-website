@@ -14,7 +14,7 @@ img {
 }
 
 .column {
-    flex: 50%;
+    flex: 51%;
     padding: 6px;
     display: flex;
     align-items: center;
